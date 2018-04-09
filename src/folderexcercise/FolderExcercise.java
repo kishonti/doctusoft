@@ -30,12 +30,12 @@ public class FolderExcercise {
 		if (!current.getName().equals("/")) {
 			// copy except children
 			FolderNode copy = new FolderNode(current.getName());
-			copy.properties = current.properties;
+			copy.setProperties(current.getProperties());
 			result.addChild(copy);
 			next = result.getChild(current.getName());
 		} else {
 			// handling root
-			result.properties = current.properties;
+			result.setProperties(current.getProperties());
 			next = result;
 		}
 		// adding relevant child nodes

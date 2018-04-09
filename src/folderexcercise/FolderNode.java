@@ -7,9 +7,9 @@ import java.util.Map;
 import java.util.Set;
 
 public class FolderNode {
-	String name;
-	Map<String, FolderNode> children;
-	Set<FolderProperty> properties;
+	private String name;
+	private Map<String, FolderNode> children;
+	private Set<FolderProperty> properties;
 
 	public FolderNode(String name) {
 		children = new HashMap<>();
@@ -47,6 +47,14 @@ public class FolderNode {
 
 	public void setProperty(FolderProperty property) {
 		properties.add(property);
+	}
+
+	public Set<FolderProperty> getProperties() {
+		return properties;
+	}
+
+	public void setProperties(Set<FolderProperty> properties) {
+		this.properties = properties;
 	}
 
 	public boolean hasProperty(FolderProperty property) {
